@@ -1,4 +1,4 @@
-import{u as t,j as e}from"./index-Bfjdd0Rk.js";function i(r){const n={a:"a",h1:"h1",hr:"hr",img:"img",li:"li",ol:"ol",p:"p",...t(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"photogrammetry",children:"Photogrammetry"}),`
+import{u as t,j as e}from"./index-DT4azCH_.js";function i(r){const n={a:"a",h1:"h1",hr:"hr",img:"img",li:"li",ol:"ol",p:"p",...t(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"photogrammetry",children:"Photogrammetry"}),`
 `,e.jsxs(n.p,{children:[e.jsx(n.img,{src:"./photogrammetry.jpg",alt:""}),`\r
 Read the text and do the tasks below.`]}),`
 `,e.jsx(n.p,{children:"Land Surveying with UAV Photogrammetry and LiDAR"}),`
