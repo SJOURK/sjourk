@@ -2,10 +2,10 @@ import React, { useMemo, useRef, useState } from "react";
 import DropZone from "./DropZone";
 
 export default function DragAndDrop({ words, children }) {
-  const wordList = useMemo(
-    () => words.split(";").map(w => w.trim()).filter(Boolean),
-    [words]
-  );
+  const wordList = useMemo(() => words.split(";")
+    .map((w, index) => ({ word: w.trim(), index }))
+    .filter(w => w.word !== ""),
+    [words]);
 
   const [zones, setZones] = useState({});
   const [available, setAvailable] = useState(wordList);
@@ -15,7 +15,7 @@ export default function DragAndDrop({ words, children }) {
 
   const handleDrop = (zoneId, word) => {
     setZones(prev => ({ ...prev, [zoneId]: word }));
-    setAvailable(prev => prev.filter(w => w !== word));
+    setAvailable(prev => prev.filter(w => w.index !== word?.index));
   };
 
   const enhance = node => {
@@ -29,7 +29,7 @@ export default function DragAndDrop({ words, children }) {
       const id = nextZoneId.current++;
       return React.cloneElement(node, {
         zoneId: id,
-        value: zones[id],
+        word: zones[id],
         onDrop: handleDrop,
         setAvailable: setAvailable,
         isCheckingAnswers: isCheckingAnswers,
@@ -50,11 +50,11 @@ export default function DragAndDrop({ words, children }) {
     <div className="DragAndDrop__words">
       {available.map(word => (
         <span
-          key={word}
+          key={`${word.word}-${word.index}`}
           draggable
-          onDragStart={e => e.dataTransfer.setData("text/plain", word)}
+          onDragStart={e => e.dataTransfer.setData("word", JSON.stringify(word))}
         >
-          {word}
+          {word.word}
         </span>
       ))}
     </div>
