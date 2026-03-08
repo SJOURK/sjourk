@@ -14,5 +14,5 @@ export default defineConfig({
     }),
     react(),
   ],
-  base: '/vite-test/',
+  base: '/sjourk/',
 });
