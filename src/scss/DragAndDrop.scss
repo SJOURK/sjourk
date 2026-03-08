@@ -1,0 +1,83 @@
+.DragAndDrop {
+  border: 1px solid #bbb;
+  border-radius: 0.3rem;
+  box-shadow: 0.05rem 0.05rem 0.1rem #0001;
+  overflow: hidden;
+
+  &__words {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    background-color: #ddd;
+    padding: 0.5rem;
+
+    span {
+      border-bottom: 1px solid #999;
+      min-width: 3rem;
+      height: 1.3rem;
+      display: inline-block;
+      padding: 0 0.4em;
+      background-color: #fff;
+      border-radius: 0.3rem;
+      box-shadow: 0.05rem 0.05rem 0.1rem #0001;
+      transition: 0.2s;
+      cursor: grab;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+
+  &__text {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .button-list {
+    justify-content: flex-start;
+    padding: 0.5rem;
+    margin: 0;
+  }
+}
+
+.DropZone {
+  border-bottom: 1px solid #999;
+  min-width: 3rem;
+  height: 1.3rem;
+  display: inline-block;
+  padding: 0 0.4em;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0.05rem 0.05rem 0.1rem #0001;
+  margin: 0 0.05em;
+  transition: 0.2s;
+
+  &--filled {
+    cursor: grab;
+  }
+
+  &--correct {
+    color: #180;
+    background-color: #efe;
+  }
+
+  &--wrong {
+    color: #900;
+    background-color: #fee;
+  }
+
+  &--dragging,
+  &--filled:hover {
+    background-color: #f5f5f5;
+  }
+}

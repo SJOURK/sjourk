@@ -1,52 +1,60 @@
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from "rehype-raw";
-import rehypeSlug from "rehype-slug";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { MDXProvider } from "@mdx-js/react";
 
-const articles = import.meta.glob("../../articles/**/*.md", {
-  query: "?raw",
-  import: "default",
-});
+import DragAndDrop from "../components/DragAndDrop";
+import DropZone from "../components/DropZone";
+
+const articles = import.meta.glob("../../articles/**/*.mdx");
 
 export default function Article() {
   const { "*": slug } = useParams();
   const safeSlug = slug?.toLowerCase().match(/^[a-z0-9-_\/]+$/)?.[0];
 
-  const [markdown, setMarkdown] = useState("");
+  const [Component, setComponent] = useState(null);
 
   useEffect(() => {
     if (!safeSlug) {
-      setMarkdown("# Invalid article");
+      setComponent(() => () => <h1>Invalid article</h1>);
       return;
     }
 
     const currentSlug = safeSlug;
-    setMarkdown("Loading…");
 
-    const loader = articles[`../../articles/${currentSlug}.md`];
+    const loader = articles[`../../articles/${currentSlug}.mdx`];
     if (!loader) {
-      setMarkdown("# Article not found");
+      setComponent(() => () => <h1>Article not found</h1>);
       return;
     }
 
     loader()
-      .then(text => {
-        if (currentSlug === safeSlug) setMarkdown(text);
+      .then(mod => {
+        if (currentSlug === safeSlug) setComponent(() => mod.default);
       })
       .catch(() => {
-        setMarkdown("# Error\nFailed to load article");
+        setComponent(() => () => (
+          <>
+            <h1>Error</h1>
+            <p>Failed to load article</p>
+          </>
+        ));
       });
   }, [safeSlug]);
 
-  return <div id="Article">
-    <div className='content'><Markdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[
-        rehypeRaw,
-        rehypeSlug,
-      ]}
-    >{markdown}</Markdown></div>
-  </div>;
+  if (!Component) return <div id="Article">Loading…</div>;
+
+  return (
+    <div id="Article">
+      <div className="content">
+        <MDXProvider
+          components={{
+            DragAndDrop,
+            DropZone,
+          }}
+        >
+          <Component />
+        </MDXProvider>
+      </div>
+    </div>
+  );
 }

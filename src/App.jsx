@@ -1,25 +1,31 @@
-import { Route, Routes } from "react-router-dom"
-import Articles from "./pages/Articles"
-import Nav from "./Components/Nav"
-import Home from "./pages/Home"
-import LandSurveying from "./pages/LandSurveying"
-import CoveringLetter from "./pages/CoveringLetter"
-import CV from "./pages/CV"
-import LSIntroduction from "./LandSurveying/LSIntroduction"
-import Datum from "./LandSurveying/Datum"
-import GeographicCoordinates from "./LandSurveying/GeographicCoordinates"
-import Cartography from "./LandSurveying/Cartography"
-import Photogrammetry from "./LandSurveying/Photogrammetry"
-import Levelling from "./LandSurveying/Levelling"
-import SurveyingInstruments from "./LandSurveying/SurveyingInstruments"
-import GPS from "./LandSurveying/GPS"
-import GIS from "./LandSurveying/GIS"
-import Geoinformatics from "./LandSurveying/Geoinformatics"
-import Modelling from "./LandSurveying/Modelling"
-import PropertyValuation from "./LandSurveying/PropertyValuation"
+import { Route, Routes } from "react-router-dom";
+import { enableDragDropTouch } from "@dragdroptouch/drag-drop-touch";
 
+import Articles from "./pages/Articles";
+import Nav from "./Components/Nav";
+import Home from "./pages/Home";
+import LandSurveying from "./pages/LandSurveying";
+import CoveringLetter from "./pages/CoveringLetter";
+import CV from "./pages/CV";
+import LSIntroduction from "./LandSurveying/LSIntroduction";
+import Datum from "./LandSurveying/Datum";
+import GeographicCoordinates from "./LandSurveying/GeographicCoordinates";
+import Cartography from "./LandSurveying/Cartography";
+import Photogrammetry from "./LandSurveying/Photogrammetry";
+import Levelling from "./LandSurveying/Levelling";
+import SurveyingInstruments from "./LandSurveying/SurveyingInstruments";
+import GPS from "./LandSurveying/GPS";
+import GIS from "./LandSurveying/GIS";
+import Geoinformatics from "./LandSurveying/Geoinformatics";
+import Modelling from "./LandSurveying/Modelling";
+import PropertyValuation from "./LandSurveying/PropertyValuation";
+import { useEffect } from "react";
 
 function App() {
+
+  useEffect(() => {
+    enableDragDropTouch();
+  }, []);
 
   return (
     <div>
@@ -43,8 +49,8 @@ function App() {
         <Route path="/Modelling" element={<Modelling></Modelling>}></Route>
         <Route path="/PropertyValuation" element={<PropertyValuation></PropertyValuation>}></Route>
       </Routes>
-    </div >)
+    </div >);
 
 }
 
-export default App
+export default App;
