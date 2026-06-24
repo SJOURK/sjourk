@@ -1,0 +1,33 @@
+{
+  "name": "sjourk",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@mdx-js/mdx": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@mdx-js/rollup": "^3.1.1",
+    "classnames": "^2.5.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-smartypants": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^4.3.1",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.7.0",
+    "gray-matter": "^4.0.3",
+    "remark-frontmatter": "^5.0.0",
+    "sass-embedded": "^1.100.0",
+    "sharp": "^0.35.2",
+    "vite": "^8.1.0"
+  }
+}
