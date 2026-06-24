@@ -2,16 +2,24 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MDXProvider } from "@mdx-js/react";
 
-import DragAndDrop from "../components/DragAndDrop";
-import DropZone from "../components/DropZone";
+import articleList, { subArticleMap } from "virtual:articles";
+import ArticleGrid from "../Components/ArticleGrid";
+import { setPageMeta } from "../utils/pageMeta";
 
-const articles = import.meta.glob("../../articles/**/*.mdx");
+const articleModules = import.meta.glob("../../articles/**/*.mdx");
 
 export default function Article() {
   const { "*": slug } = useParams();
   const safeSlug = slug?.toLowerCase().match(/^[a-z0-9-_\/]+$/)?.[0];
 
   const [Component, setComponent] = useState(null);
+  const [meta, setMeta] = useState(null);
+  const [mdxComponents, setMdxComponents] = useState(null);
+
+  useEffect(() => {
+    import("../Components/articleComponents")
+      .then(mod => setMdxComponents(mod.default));
+  }, []);
 
   useEffect(() => {
     if (!safeSlug) {
@@ -21,40 +29,64 @@ export default function Article() {
 
     const currentSlug = safeSlug;
 
-    const loader = articles[`../../articles/${currentSlug}.mdx`];
+    const loader = articleModules[`../../articles/${currentSlug}.mdx`]
+      ?? articleModules[`../../articles/${currentSlug}/index.mdx`];
     if (!loader) {
       setComponent(() => () => <h1>Article not found</h1>);
       return;
     }
+
+    window.scrollTo(0, 0);
+    const meta = articleList.find(a => a.slug === currentSlug)
+      ?? Object.values(subArticleMap).flat().find(a => a.slug === currentSlug);
+    setMeta(meta ?? null);
+    setPageMeta({
+      title: meta?.title ?? currentSlug,
+      description: meta?.blurb,
+      image: meta?.image,
+      type: "article",
+      date: meta?.date,
+    });
 
     loader()
       .then(mod => {
         if (currentSlug === safeSlug) setComponent(() => mod.default);
       })
       .catch(() => {
-        setComponent(() => () => (
-          <>
-            <h1>Error</h1>
-            <p>Failed to load article</p>
-          </>
-        ));
+        setComponent(() => () => <>
+          <h1>Error</h1>
+          <p>Failed to load article</p>
+        </>);
       });
   }, [safeSlug]);
 
-  if (!Component) return <div id="Article">Loading…</div>;
+  if (!Component || !mdxComponents) return <div id="Article">Loading…</div>;
 
-  return (
-    <div id="Article">
-      <div className="content">
-        <MDXProvider
-          components={{
-            DragAndDrop,
-            DropZone,
-          }}
-        >
-          <Component />
-        </MDXProvider>
-      </div>
-    </div>
-  );
+  const subArticles = safeSlug ? subArticleMap[safeSlug] : null;
+
+  return <div id="Article">
+    <main className="content" tabIndex="-1">
+      <MDXProvider
+        components={{
+          h1: ({ children }) => <>
+            <h1>{children}</h1>
+            {meta?.date && <div className="article-meta">
+              <span className="article-meta__date">{meta.date}</span>
+            </div>}
+          </>,
+          hr: () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308.27 11.47" className="separator">
+            <polygon points="0.33,5.74 3.03,3.03 5.74,5.74 3.03,8.44" />
+            <polygon points="302.53,5.74 305.24,3.03 307.94,5.74 305.24,8.44" />
+            <polygon points="148.73,5.74 154.13,0.33 159.54,5.74 154.13,11.14" />
+            <line x1="166.82" y1="5.74" x2="297.55" y2="5.74" />
+            <line x1="10.71" y1="5.74" x2="141.45" y2="5.74" />
+          </svg>,
+          ...mdxComponents,
+        }}
+      >
+        <Component />
+      </MDXProvider>
+      {subArticles && <ArticleGrid articles={subArticles} />}
+    </main>
+  </div>;
 }

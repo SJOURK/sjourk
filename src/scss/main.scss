@@ -1,80 +1,46 @@
 /* general */
+@use "variables";
 @use "reset";
+@use "page";
 
 /* components */
+@use "Nav";
+@use "ArticleGrid";
 @use "DragAndDrop";
+@use "Choices";
+@use "Img";
+@use "Categorize";
+@use "FillIn";
 
-nav {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 1rem;
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  text-align: center;
-  padding-top: 2em;
-  background-color: #eee;
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/Rubik-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
-h1 {
-  font-family: serif;
-  font-size: 40px;
-  color: black;
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("/fonts/CrimsonPro-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-.content {
-  margin: 0 auto;
-  max-width: 60rem;
-  padding: 0 3rem;
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("/fonts/CrimsonPro-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
 }
 
-#Article {
-  text-align: justify;
-
-  h1 {
-    text-align: center;
-  }
-}
-
-a {
-  color: #555;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #ccc;
-  }
-}
-
-.table-of-contents {
-  margin-top: 1rem;
-}
-
-img {
-  width: 50%;
-  display: block;
-  margin: 1rem auto;
-}
-
-.button-list {
-  display: flex;
-  gap: 0.5rem;
-  margin: 1rem 0;
-  align-items: center;
-  justify-content: center;
-}
-
-.button {
-  padding: 0.2em 1em 0.3em 1em;
-  background-color: #fff;
-  color: #555;
-  font-weight: 700;
-  border: 1px solid #bbb;
-  border-radius: 0.3rem;
-  box-shadow: 0.05rem 0.05rem 0.1rem #0001;
-  transition: 0.2s;
-
-  &:hover {
-    background-color: #f5f5f5;
-  }
-}

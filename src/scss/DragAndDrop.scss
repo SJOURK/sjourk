@@ -1,43 +1,33 @@
 .DragAndDrop {
-  border: 1px solid #bbb;
-  border-radius: 0.3rem;
-  box-shadow: 0.05rem 0.05rem 0.1rem #0001;
-  overflow: hidden;
-
   &__words {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
-    min-height: 2.5rem;
-    background-color: #ddd;
+    gap: 0.2rem;
+    min-height: 2.8rem;
+    background-color: var(--c-surface-2);
     padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.1s;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
-    span {
-      border-bottom: 1px solid #999;
-      min-width: 3rem;
-      height: 1.8rem;
-      display: inline-block;
-      padding: 0.2em 1em;
-      background-color: #fff;
-      border-radius: 0.3rem;
-      box-shadow: 0.05rem 0.05rem 0.1rem #0001;
-      transition: 0.2s;
-      cursor: grab;
-
-      &:hover {
-        background-color: #f5f5f5;
-      }
+    &--over {
+      background-color: var(--c-border);
     }
   }
 
   &__text {
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem 0;
+
+    * {
+      margin: 0.5rem 0;
+    }
 
     > *:first-child {
       margin-top: 0;
     }
-
     > *:last-child {
       margin-bottom: 0;
     }
@@ -45,39 +35,84 @@
 
   .button-list {
     justify-content: flex-start;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     margin: 0;
   }
 }
 
 .DropZone {
-  border-bottom: 1px solid #999;
-  min-width: 3rem;
-  height: 1.8rem;
-  display: inline-block;
-  padding: 0.2em 1em;
-  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3em;
+  height: 1.2em;
+  border: 1px dashed var(--c-border-2);
+  line-height: 1;
   border-radius: 0.3rem;
-  box-shadow: 0.05rem 0.05rem 0.1rem #0001;
-  margin: 0 0.05em;
-  transition: 0.2s;
+  margin: -0.2em 0.05em;
+  text-indent: 0;
+  transition: 0.1s;
 
   &--filled {
-    cursor: grab;
+    border-color: transparent;
+    min-width: 2em;
+  }
+
+  &--over {
+    border-color: var(--c-border-2);
+    background-color: var(--c-surface-2);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--c-text-2);
+    box-shadow: 0 0 0 2px var(--c-border-2);
+  }
+}
+
+.WordChip {
+  display: inline-block;
+  min-width: 2em;
+  height: 1.2em;
+  padding: 0.1em 0.3em 0 0.3em;
+  background-color: var(--c-surface);
+  line-height: 1;
+  font-size: 0.8em;
+  border-radius: 0.2rem;
+  box-shadow: var(--c-chip-shadow);
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  white-space: nowrap;
+  transition: 0.1s;
+
+  &:hover {
+    background-color: var(--c-surface-2);
+    box-shadow: var(--c-chip-shadow-hover);
+  }
+
+  &--ghost {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  &--overlay {
+    cursor: grabbing;
+    box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.25);
   }
 
   &--correct {
-    color: #180;
-    background-color: #efe;
+    color: var(--c-correct);
+    background-color: var(--c-correct-bg);
   }
 
   &--wrong {
-    color: #900;
-    background-color: #fee;
+    color: var(--c-wrong);
+    background-color: var(--c-wrong-bg);
   }
 
-  &--dragging,
-  &--filled:hover {
-    background-color: #f5f5f5;
+  &--kb-selected {
+    box-shadow: 0 0 0 2px var(--c-text-2);
+    background-color: var(--c-surface-2);
   }
 }

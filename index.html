@@ -2,11 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>page</title>
+    <title>SJO URK</title>
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="SJO URK" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Skrypty dla studentów" />
+    <meta property="og:url" content="https://sjourk.github.io/sjourk/" />
+    <meta
+      property="og:image"
+      content="https://sjourk.github.io/sjourk/media/ogimg.jpg"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SJO URK" />
+    <meta name="twitter:description" content="Skrypty dla studentów" />
+    <meta
+      name="twitter:image"
+      content="https://sjourk.github.io/sjourk/media/ogimg.jpg"
+    />
+
+    <meta property="article:published_time" content="" />
+
+    <link
+      rel="preload"
+      href="/fonts/Rubik-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Rubik-Italic-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/CrimsonPro-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/CrimsonPro-Italic-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      })();
+    </script>
   </head>
-  <body>
+  <body tabindex="-1">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

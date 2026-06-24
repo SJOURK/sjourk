@@ -1,0 +1,60 @@
+.Img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  &__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100dvh;
+    border-radius: inherit;
+    margin: 0 auto;
+  }
+
+  &__caption {
+    font-size: 0.85em;
+    font-style: italic;
+    text-align: center;
+    color: inherit;
+    padding: 0.35rem 0.5rem 0;
+  }
+
+  &--float-left {
+    float: left;
+    max-width: 40%;
+    margin: 1rem 1rem 0.2rem 0;
+    border: 1px solid currentColor;
+  }
+
+  &--float-right {
+    float: right;
+    max-width: 40%;
+    margin: 0.2rem 0 0.2rem 1rem;
+    border: 1px solid currentColor;
+  }
+
+  &--full-bleed {
+    width: calc(100vw - var(--scrollbar-width, 0px));
+    max-width: calc(100vw - var(--scrollbar-width, 0px));
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+
+    .Img__image {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    .Img__caption {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+  }
+
+  &--no-max-height .Img__image {
+    max-height: none;
+  }
+}

@@ -1,0 +1,161 @@
+@use "variables" as *;
+
+.breadcrumbs {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  z-index: 21;
+  background-color: var(--c-nav);
+  color: var(--c-text-2);
+  padding-right: $sideBorder;
+
+  &__home {
+    margin: 0;
+    height: 36px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0 0.3rem 0 $sideBorder;
+
+    img {
+      width: 1.6rem;
+      margin: 0;
+      border-radius: 3px;
+      padding: 3px;
+    }
+
+    span {
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      span {
+        border-bottom-color: var(--c-text);
+      }
+    }
+  }
+
+  &__separator {
+    color: var(--c-text-2);
+    opacity: 0.5;
+    font-size: 1.2em;
+    line-height: 1;
+    user-select: none;
+  }
+
+  &__parent {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+
+    span {
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      span {
+        border-bottom-color: var(--c-text);
+      }
+    }
+  }
+}
+
+.nav-right {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 36px;
+  gap: $sideBorder;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 $sideBorder;
+  z-index: 20;
+  background-color: var(--c-nav);
+
+  .nav-separator {
+    flex: 1 0 auto;
+  }
+
+  a {
+    display: block;
+    color: var(--c-text-2);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    margin: 0.5em 0;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--c-text);
+      border-bottom-color: var(--c-text);
+    }
+  }
+
+  .color-theme-button {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--c-text-2);
+    border-radius: 50%;
+    transform: rotate(0.1deg);
+    opacity: 0.75;
+    transition: 0.3s;
+
+    svg {
+      position: absolute;
+      display: block;
+      left: -70%;
+      top: 10%;
+      width: 160%;
+      max-width: none;
+      height: auto;
+      transition: 0.3s;
+
+      path,
+      circle {
+        fill: var(--c-text);
+        transition: 0.3s;
+      }
+
+      .color-theme-button__light-icon {
+        opacity: 1;
+        transition: 0.3s;
+      }
+
+      .color-theme-button__dark-icon {
+        opacity: 0;
+        transition: 0.3s;
+      }
+    }
+
+    &--dark {
+      box-shadow: 0 0 0 2px var(--c-text-2);
+
+      svg {
+        left: 9%;
+
+        .color-theme-button__dark-icon {
+          opacity: 1;
+        }
+
+        .color-theme-button__light-icon {
+          opacity: 0;
+        }
+      }
+    }
+
+    &:hover {
+      transform: rotate(15deg);
+      opacity: 1;
+    }
+  }
+}

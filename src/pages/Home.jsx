@@ -1,22 +1,25 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import ArticleGrid from "../Components/ArticleGrid";
+import { setPageMeta } from "../utils/pageMeta";
+import Img from "../Components/Img";
 
 function Home() {
+  useEffect(() => {
+    setPageMeta({
+      title: "SJO URK",
+      image: "media/ogimg.jpg",
+      type: "website",
+    });
+  }, []);
 
-  return (
-    <div className="content">
-      <h1>Skrypty do nauki języka angielskiego dla studentów</h1>
-      <h2>Studium Języków Obcych Uniwersytetu Rolniczego w Krakowie</h2>
-      <div className="table-of-contents"><h3>Contents</h3>
-        <div><Link to="/land_surveying">Land Surveying</Link></div>
-        <div><Link to="/covering_letter">Covering Letter</Link></div>
-        <div><Link to="/cv">CV</Link></div>
-        <div className="button-list">
-          <Link to="/articles/test" className="button">drag and drop test</Link>
-        </div>
-      </div>
-    </div>
-  );
-
+  return <main className="content" tabIndex="-1">
+    <div style={{ height: '5rem' }}></div>
+    <Img src="media/sjo-logo-mono.svg" width="20" />
+    <div style={{ height: '1rem' }}></div>
+    <h1>SJO URK</h1>
+    <p>Skrypty dla studentów</p>
+    <ArticleGrid />
+  </main>;
 }
 
 export default Home;
