@@ -1,0 +1,172 @@
+---
+title: GPS
+date: 2026-09-30
+image: articles/gps.jpg
+imageAlt: 
+blurb: GPS (Global Positioning System) is a satellite-based system providing global positioning, navigation, and timing.
+---
+
+# GPS
+
+1. What are some common uses of GPS in everyday life?
+2. How have you used GPS in your studies?
+3. How could GPS be used in your future workplace or profession?
+
+---
+
+Read the article below and choose the best answer.
+
+---
+
+GPS  
+
+The rapid development of the Global Navigation Satellite System (GNSS) has transformed the positioning landscape. Instead of relying on a single constellation, modern receivers can simultaneously observe GPS, Galileo, GLONASS, and the BeiDou Navigation Satellite System (BDS). This growing constellation of satellites brings clear advantages: better observation geometry, greater signal availability, and improved continuity and reliability of navigation services. Naturally, these benefits have made Precise Point Positioning (PPP) one of the most important techniques for achieving high-precision positioning. However, combining several GNSS constellations is not as straightforward as simply adding more satellites. Each system operates within its own coordinate reference frame, follows a different time reference, and transmits signals with its own technical characteristics. These differences give rise to the Inter-System Bias (ISB)—a seemingly small parameter that can have a significant impact on high-precision positioning and therefore needs to be carefully estimated. 
+
+At its core, PPP determines receiver coordinates directly from raw satellite observations. The mathematical model relies on two fundamental types of measurements: pseudorange and carrier phase. Their accuracy, however, depends heavily on how precisely the geometric distance between the satellite and receiver is represented. The observations are affected by both receiver clock offsets and satellite clock offsets, while the signal itself must travel through the troposphere and ionosphere, each introducing its own delay. The receiver and satellite hardware add another layer of systematic errors, and the carrier phase brings an additional challenge in the form of ambiguity parameters that must be estimated during processing. To keep the remaining errors under control, the PPP model also accounts for antenna characteristics, relativistic effects, Earth rotation, tidal deformation, and phase wind-up. The use of precise satellite orbit and clock products strengthens the model even further by reducing satellite-related uncertainties before the estimation of the remaining parameters begins. 
+
+The positioning strategy considered here is the undifferenced and uncombined (UDUC) PPP model. Rather than forming combinations between frequencies or satellites, UDUC PPP works directly with the original observations. This preserves the full information contained in the measurements while allowing the model to estimate several parameters simultaneously. These include receiver coordinates, atmospheric delays, ambiguity parameters, receiver clock corrections, and ISB values. The treatment of hardware delays is particularly important. Because pseudorange hardware delays are generally stable over time, they can be absorbed into the receiver clock parameter. Similarly, the stable component of the carrier phase hardware delay is incorporated into the ambiguity parameter, while only its time-dependent variation contributes to the receiver clock correction. In this way, the model avoids unnecessarily estimating additional parameters while retaining the precision required for high-accuracy positioning. 
+
+Once several constellations enter the picture, a reference system must be chosen. GPS typically takes this role, providing the reference against which the other systems are compared. Separate ISB parameters are then estimated for Galileo, BDS-2, and BDS-3. Rather than introducing a completely independent receiver clock for every constellation, the model captures the inter-system differences through these additional bias parameters. The BeiDou system deserves particular attention because BDS-2 and BDS-3, despite belonging to the same navigation system, are not fully compatible from an observation-modelling perspective. The modernised BDS-3 constellation introduced changes in signal modulation and receiver processing. Consequently, an additional bias must be estimated between the two generations. In other words, sharing the same system name does not necessarily mean that the receiver sees both generations in exactly the same way. 
+
+The physical origin of ISB is equally interesting. It is not produced by one isolated effect but rather by several physical and technical contributions acting together. One component is associated with differences between system time references, while another originates from receiver hardware delays introduced during signal reception. Signals from different constellations are transmitted at different carrier frequencies and occupy different bandwidths. Inside the receiver, they therefore pass through different electronic channels, filters, and signal-processing paths. These hardware-dependent paths can introduce system-specific delays that remain even when a common GPS time reference is used for precise orbit and clock products. ISB can consequently be viewed as the remaining difference between receiver clock estimates after the principal hardware effects have already been incorporated into the observation model. 
+
+Estimating ISB also requires a decision about how its temporal behaviour should be represented. Several stochastic models are available, each telling a slightly different story about how the parameter evolves. A white noise model assumes that consecutive estimates are statistically independent and fluctuate randomly around a constant mean value. A random walk model, on the other hand, allows the parameter to drift gradually with time, making it suitable when slow changes in the receiver or observation environment are expected. At the opposite extreme, a random constant model assumes that no temporal variation occurs at all. Among these options, the white noise model provides a practical compromise. It offers enough flexibility to accommodate small changes in ISB while avoiding excessive freedom that could compromise numerical stability during continuous processing. 
+
+Long-term PPP introduces another challenge: day-boundary discontinuities (DBD). Precise orbit and clock products are generated separately for individual days, meaning that moving from one day to the next can potentially introduce artificial jumps into the estimated parameters. Maintaining a continuous solution therefore requires careful parameter transfer. Receiver clock estimates, atmospheric parameters, ambiguity values, and ISB estimates are carried forward from one day to the next. Additional constraints are applied to reduce the impact of satellite clock discontinuities, while observations from low-elevation satellites are assigned lower weights because they are generally more vulnerable to atmospheric and multipath effects. Robust estimation methods provide another layer of protection by suppressing observations associated with unusually large residuals. With these measures in place, the remaining influence of DBD on both positioning accuracy and ISB becomes negligible. 
+
+The behaviour of ISB becomes particularly revealing when different observation periods are examined. Over a single day, the parameter is remarkably stable, showing only a small standard deviation (STD) and limited fluctuation. Galileo generally exhibits the most stable behaviour, reflecting its high-quality signals, while BDS-3 shows slightly greater variability. BDS-2 displays the largest variability among the analysed constellations. Interestingly, the choice of precise orbit and clock products can change the absolute ISB values because different products are generated using different processing strategies. However, despite these differences in absolute magnitude, the short-term temporal pattern remains broadly similar. Extend the observation period from one day to several weeks, however, and the picture changes: ISB begins to show more noticeable variations, demonstrating that long-term temporal behaviour cannot simply be ignored in continuous PPP applications. 
+
+Receiver characteristics add another piece to the puzzle. Different manufacturers use different hardware architectures and signal-processing strategies, and these differences inevitably influence the absolute value of the estimated ISB. The receiver antenna also contributes additional hardware delays, introducing further variations between configurations. Yet the story becomes surprisingly consistent when continuous multi-day processing is considered. Stations equipped with different receivers and antennas can exhibit very similar temporal behaviour. Although the absolute magnitude of ISB may change from one receiver configuration to another, its overall pattern of short-term and long-term fluctuations remains remarkably consistent. The receiver therefore influences how large the bias appears, but not necessarily how it behaves over time. 
+
+Ultimately, accurate modelling of ISB is essential for reliable multi-GNSS PPP. What initially appears to be a small correction parameter is actually the product of a complex interaction between receiver hardware, system time references, signal characteristics, observation modelling, atmospheric corrections, ambiguity estimation, and stochastic parameterisation. Understanding these interactions allows the advantages of multiple GNSS constellations to be exploited without allowing their differences to undermine positioning performance. Careful treatment of ISB therefore contributes not only to improved positioning accuracy, but also to more robust Positioning, Navigation, and Timing (PNT) services. As modern GNSS continues to evolve, the ability to combine increasingly diverse satellite signals into a single precise and reliable solution will remain at the heart of high-precision navigation. 
+
+<ChoiceSet>
+1. What is the main purpose of introducing Inter-System Bias (ISB) into multi-GNSS Precise Point Positioning (PPP)? 
+<Choices single>
+<Choice>A. To reduce the number of satellites required for positioning.</Choice>
+<Choice correct>B. To compensate for differences between GNSS constellations, such as hardware delays and time references.</Choice>
+<Choice>C. To increase the transmission power of GNSS signals.</Choice>
+</Choices>
+2. Which observation model is used in the article for processing raw GNSS observations? 
+<Choices single>
+<Choice>A. Double-differenced observation model.</Choice>
+<Choice>B. Ionosphere-free combined observation model.</Choice>
+<Choice correct>C. Undifferenced and uncombined (UDUC) PPP model.</Choice>
+</Choices>
+3. Why must BDS-2 and BDS-3 be treated separately during PPP processing? 
+<Choices single>
+<Choice>A. They use completely different satellite orbits.</Choice>
+<Choice correct>B. Their signal characteristics and receiver processing are not fully compatible.</Choice>
+<Choice>C. BDS-2 only operates in Asia, while BDS-3 operates in Europe.</Choice>
+</Choices>
+4. Which stochastic model assumes that consecutive ISB estimates are independent of one another? 
+<Choices single>
+<Choice correct>A. White noise model.</Choice>
+<Choice>B. Random walk model.</Choice>
+<Choice>C. Random constant model.</Choice>
+</Choices>
+5. According to the article, which GNSS constellation generally showed the most stable short-term ISB behaviour among the analysed constellations? 
+<Choices single>
+<Choice correct>A. Galileo.</Choice>
+<Choice>B. BDS-2.</Choice>
+<Choice>C. GPS.</Choice>
+</Choices>
+6. What conclusion does the article draw regarding receiver and antenna types? 
+<Choices single>
+<Choice>A. They strongly influence the long-term temporal behaviour of ISB.</Choice>
+<Choice correct>B. They influence the absolute ISB values but have little effect on its overall temporal behaviour.</Choice>
+<Choice>C. They eliminate the need to estimate ISB parameters.</Choice>
+</Choices>
+</ChoiceSet>
+
+<FillIn>
+Decypher the acronyms which are used the article.
+<div>GPS <Blank answer="Global Positioning System"/></div>
+<div>GNSS <Blank answer="Global Navigation Satellite System"/></div>
+<div>BDS <Blank answer="BeiDou Navigation Satellite System"/></div>
+<div>DBD <Blank answer="day-boundary discontinuities"/></div>
+<div>ISB <Blank answer="Inter-System Bias"/></div>
+<div>PNT <Blank answer="Positioning, Navigation, and Timing "/></div>
+<div>PPP <Blank answer="Precise Point Positioning"/></div>
+<div>STD <Blank answer="standard deviation"/></div>
+<div>UDUC <Blank answer="undifferenced and uncombined"/></div>
+</FillIn>
+
+Match the terms that collocate in the article.
+<DragAndDrop words="ambiquity;carrier;coordinate;measurements;noise;observation;random;receiver;stochastic">
+
+<DropZone answer="receiver"/> clock offsets
+
+<DropZone answer="stochastic"/>models 
+
+pseudorange <DropZone answer="measurements"/>delays
+
+<DropZone answer="carrier"/>phase
+
+<DropZone answer="observation"/>geometry
+
+<DropZone answer="coordinate"/>reference frame
+
+<DropZone answer="ambiquity"/>parameters
+
+white<DropZone answer="noise"/>model
+
+<DropZone answer="random"/>walk model
+
+</DragAndDrop>
+
+Use the terms to complete the dialogue between two land surveyors. 
+
+<DragAndDrop words="boundary;calibrated;Navigation;pseudorange;receivers;references;satellite;undifferenced;walk;white"> 
+
+Characters: 
+
+Martin – an experienced land surveyor who is sceptical of new technology 
+
+Alex – a young land surveyor and a technology enthusiast who enjoys experimenting with new GNSS techniques 
+
+Martin: I’ve been surveying for thirty-five years, Alex. I still trust a well-<DropZone answer="calibrated"/>instrument, a field book, and my own judgement. Now you’re telling me that GPS and GNSS can practically do the job for us. 
+
+Alex: Not quite! They can make our work faster and more precise, but they don’t replace professional judgement. Modern GNSS <DropZone answer="receivers"/> can track several constellations simultaneously, including GPS and BDS, which gives us better observation geometry and more reliable positioning. 
+
+Martin: More satellites, more signals, more things that can go wrong. I prefer keeping things simple. 
+
+Alex: That’s exactly why advanced processing is useful. With Precise Point Positioning (PPP), we can determine highly accurate coordinates without depending on a nearby reference station. We use precise <DropZone answer="satellite"/> orbit and clock information to improve the solution. 
+
+Martin: PPP sounds impressive, but I assume there’s a catch. 
+
+Alex: There are several! For example, when we combine different GNSS constellations, we have to account for Inter-System Bias (ISB). Different systems have different signal characteristics and time <DropZone answer="references"/>, while receiver hardware can introduce system-dependent delays. 
+
+Martin: So even though the receiver is observing the same piece of land, the satellites don't quite agree with one another? 
+
+Alex: Exactly. And the processing model matters too. In <DropZone answer="undifferenced"/>and uncombined (UDUC) PPP, we work with the original observations instead of forming differences between satellites or combining frequencies. That allows us to model <DropZone answer="pseudorange"/> measurements, carrier phase, ambiguity parameters, and other error sources separately. 
+
+Martin: I’m beginning to regret asking. What about all these statistical models you keep talking about? 
+
+Alex: They help us understand how the estimated parameters behave over time. For example, a <DropZone answer="white"/> noise model treats successive estimates as statistically independent, while a random <DropZone answer="walk"/> model allows a parameter to change gradually. We can also use standard deviation (STD) to assess the spread of the estimates. 
+
+Martin: And what happens when you process data from one day and then continue into the next? Surely the software doesn't simply pretend that midnight never happened. 
+
+Alex: Fortunately, it doesn't! We have to account for day-<DropZone answer="boundary"/> discontinuities (DBD) when precise products change from one processing day to another. We transfer parameters between days and apply appropriate constraints so that the positioning solution remains continuous. 
+
+Martin: I suppose all this is useful for more than just producing coordinates on a survey plan. 
+
+Alex: Definitely. Advanced GNSS techniques support much broader Positioning, <DropZone answer="Navigation"/>, and Timing (PNT) applications. For land surveyors, that means we can improve geodetic control, monitor deformation, establish reference points, support construction, and work efficiently over large areas. 
+
+Martin: Hmm. I still don't trust a machine to tell me where I am. 
+
+Alex: You don't have to. Let the machine calculate the coordinates. Your job is to understand whether those coordinates make sense. 
+
+Martin: Fair enough. But if you ever suggest replacing my field book with an app, we're going to have a serious problem. 
+
+Alex: Deal. I'll leave the field book alone — for now. 
+
+</DragAndDrop>
+
+---
+
+Attributions
+
+The Text GPS is a derivative of: Lu, Y., Yang, H., Li, B., Li, J., Xu, A., & Zhang, M. Analysis of Characteristics for Inter-System Bias on Multi-GNSS Undifferenced and Uncombined Precise Point Positioning. Remote Sensing, 15(9), 2252 (2023). [MDPI] (https://www.mdpi.com/2072-4292/15/9/2252) Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+[Oxford Learner’s Dictionaries](https://www.oxfordlearnersdictionaries.com/); [Longman Dictionary of Contemporary English](https://www.ldoceonline.com/); [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/). Definitions have been paraphrased by the author.

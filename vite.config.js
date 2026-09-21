@@ -5,15 +5,18 @@ import remarkGfm from "remark-gfm";
 import remarkSmartypants from "remark-smartypants";
 import remarkFrontmatter from "remark-frontmatter";
 import rehypeSlug from "rehype-slug";
+import remarkLetterLists from "./remark-plugin-letter-lists.js";
 import articlesPlugin from "./vite-plugin-articles.js";
 import imagesPlugin from "./vite-plugin-images.js";
+import listIndentPlugin from "./vite-plugin-list-indent.js";
 
 export default defineConfig({
   plugins: [
     articlesPlugin(),
     imagesPlugin(),
+    listIndentPlugin(),
     mdx({
-      remarkPlugins: [remarkFrontmatter, remarkGfm, remarkSmartypants],
+      remarkPlugins: [remarkFrontmatter, remarkGfm, remarkSmartypants, remarkLetterLists],
       rehypePlugins: [rehypeSlug],
       providerImportSource: "@mdx-js/react",
     }),
