@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-D99yPcNr.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Choice:i,ChoiceSet:o,Choices:s,DragAndDrop:c,DropZone:l}=r;return i||a(`Choice`,!0),o||a(`ChoiceSet`,!0),s||a(`Choices`,!0),c||a(`DragAndDrop`,!0),l||a(`DropZone`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`geographic-coordinate-system`,children:`Geographic Coordinate System`}),`
+import{i as e,r as t}from"./index-DbVDs7m7.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Choice:i,ChoiceSet:o,Choices:s,DragAndDrop:c,DropZone:l}=r;return i||a(`Choice`,!0),o||a(`ChoiceSet`,!0),s||a(`Choices`,!0),c||a(`DragAndDrop`,!0),l||a(`DropZone`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`geographic-coordinate-system`,children:`Geographic Coordinate System`}),`
 `,(0,n.jsxs)(r.ol,{children:[`
 `,(0,n.jsxs)(r.li,{children:[`
 `,(0,n.jsx)(r.p,{children:`How do you think a ship’s captain in the middle of the ocean, with no land in sight, can know exactly where the ship is?`}),`
