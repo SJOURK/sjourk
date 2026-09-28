@@ -1,9 +1,9 @@
 ---
 title: GIS
 date: 2026-09-30
-image: articles/gis.jpg
-imageAlt: 
-blurb:GIS (Geographic Information System)
+image: articles/gis.jpg 
+blurb: Geographic Information System is computer system that captures, stores, analyzes, and displays spatially referenced data, allowing users to visualize patterns, relationships, and trends across geographic locations.
+order: 5
 ---
 
 # GIS
@@ -74,10 +74,74 @@ Complete each sentence with the correct word from the word bank. Two words will 
 
 ---
 
-Read the text and complete the numbered gaps with the correct words from the word bank. Two words will not be needed.
+Complete the gaps with the correct words. Two words will not be needed.
 
 <DragAndDrop words=" attribute;buffer;choropleth map;coordinate system;Digital Elevation Models;geocoding;georeferenced;network analysis;overlay;remote sensing;topology;vector">
 
 Local authorities increasingly rely on GIS to manage flood risk in urban areas. Aerial and satellite imagery obtained through (1) <DropZone answer="remote sensing"/> is processed to create high-resolution elevation models, known as (2) <DropZone answer="Digital Elevation Models"/>, which reveal how water is likely to flow across the landscape. These raster surfaces are then combined with (3) <DropZone answer="vector"/> data such as roads, buildings and drainage networks through an (4) <DropZone answer="overlay"/> operation, allowing planners to see exactly where infrastructure intersects with flood-prone zones. A (5) <DropZone answer="buffer"/> of a set distance is often generated around rivers to define restricted development areas, while (6) <DropZone answer="network analysis"/> enables engineers to plan the fastest evacuation routes through the road network. Before any of this analysis can begin, however, raw survey data usually has to be (7) <DropZone answer="georeferenced"/> so that it aligns correctly with a national (8) <DropZone answer="coordinate system"/>, and its (9) <DropZone answer="attribute"/> table must be checked for accuracy. Finally, the results are displayed as a (10) <DropZone answer="choropleth map"/>, in which each administrative zone is shaded according to its level of flood risk, making the information immediately accessible to non-specialists.
 
 </DragAndDrop>
+
+---
+
+Read the text and do the tasks below. 
+
+Cities today drown in numbers. Every sensor, smartphone and traffic light quietly produces streams of data, and the smart city concept exists precisely to turn that flood into something a city planner can actually use. The real challenge is not collecting data — it's making sense of the deluge, and that's where visual analytics earns its keep, translating raw, chaotic figures into images the human eye can instantly grasp. 
+
+Geographic information systems, or GIS, sit at the heart of this transformation. Because so much urban data is inherently spatial — tied to a specific street corner, sensor location or neighbourhood — GIS brings something ordinary charts cannot: the ability to place information on a map and perform genuine geographic analysis and geostatistics on it. Most city data qualifies as two-dimensional, anchored by latitude and longitude, which is exactly why plotting it on an X-Y map remains one of the most intuitive ways to display it. 
+
+Of course, geography is only one dimension of the puzzle. Urban datasets often balloon into far more complex, multidimensional territory, demanding cleverer tricks than a simple map or scatterplot. Analysts lean on scatterplot matrices and parallel coordinates to reveal correlations hiding inside sprawling variables, or turn to principal component analysis to compress dozens of variables into a handful of meaningful new ones. When data resembles a tangled hierarchy — file systems, social networks, shopping patterns — a graph made of nodes and edges tells the story far better than a spreadsheet ever could. For datasets too dense for the eye to parse directly, dense pixel displays assign colour to each data point, letting patterns emerge from what would otherwise look like static. Icons offer a playful alternative too: Chernoff faces, for instance, encode different variables into facial features, so a frown or a raised eyebrow on a map might quietly be reporting pollution levels. 
+
+None of these techniques work in isolation, though. Interactivity is what turns a static picture into a genuine investigative tool. Zooming lets an analyst move fluidly between a city-wide overview and street-level detail; drill-down distortion techniques preserve the bigger picture while allowing a deep dive into specific subsets; and linking and brushing let two different charts talk to each other, so highlighting a cluster in one graph instantly marks the same points elsewhere. It's this constant conversation between the analyst and the data that turns passive visualization into active discovery. 
+
+All of these ingredients converge on the humble city dashboard, arguably the most public-facing product of urban data visualization. Depending on their purpose, dashboards can be built as operational tools for daily monitoring, tactical instruments for medium-term planning, or strategic panels aimed at long-term policy. When they're paired with open data and GIS, dashboards become genuinely powerful: real-time, geographically anchored windows into how a city is actually functioning, letting citizens and officials alike focus on outcomes rather than raw numbers. 
+
+Take a dashboard built around air quality and traffic in a sprawling metropolis like Istanbul. Pollutant readings — fine particulates, ozone, nitrogen dioxide and the rest — arrive hourly from monitoring stations, while traffic figures roll in from an open municipal data portal. Housing this information requires its own infrastructure: a NoSQL database for the sensor readings and a relational, spatially-aware database extension for the traffic layer, merging both so that vehicles and air-quality stations located near one another can be compared directly. An open-source business-intelligence platform then pulls it all together, plotting monitoring stations over satellite basemap imagery so their exact geographic position becomes part of the story, not just an afterthought. 
+
+From there, the same dataset gets sliced a dozen entertaining ways: a time series traces how each pollutant rises and falls hour by hour; a pie chart shows which pollutant dominates across the year; a sunburst chart nests pollutant concentrations against nearby vehicle counts; a treemap compares stations against each other by proportion; a heatmap flags which pollutant is the worst offender at each site; and box plots summarise the spread of speeds and vehicle numbers in one glance. Layer these together and a genuinely compelling pattern emerges — heavier traffic tracking closely with dirtier air. 
+
+Cities like London, Amsterdam, Barcelona and Dublin have already embraced similar dashboards. Yet none of this is effortless: missing sensor readings create gaps that distort the full picture, and cluttered, overly dense visuals can generate as much confusion as clarity. Careful data cleaning before any mapping or charting begins remains, therefore, an unglamorous but essential first step toward a dashboard anyone can actually trust. 
+
+---
+
+Having read the text, choose the best answer.
+
+<ChoiceSet>
+
+According to the article, what is the real challenge cities face regarding data today?
+<Choices single> <Choice>A. Collecting enough data from sensors and smartphones</Choice> <Choice correct>B. Making sense of the overwhelming flood of data</Choice> <Choice>C. Convincing citizens to share their data</Choice> <Choice>D. Storing data securely for long periods</Choice> </Choices>
+Why is GIS especially valuable for analysing urban data?
+<Choices single> <Choice>A. It is cheaper to run than other data systems</Choice> <Choice>B. It works without an internet connection</Choice> <Choice correct>C. Most urban data is spatial, so it can be placed on a map for geographic analysis</Choice> <Choice>D. It automatically cleans messy datasets</Choice> </Choices>
+Which technique does the article mention for compressing many variables into a smaller number of meaningful ones?
+<Choices single> <Choice>A. Dense pixel displays</Choice> <Choice>B. Chernoff faces</Choice> <Choice>C. Parallel coordinates</Choice> <Choice correct>D. Principal component analysis</Choice> </Choices>
+What do "linking and brushing" allow an analyst to do?
+<Choices single> <Choice correct>A. Highlight a cluster in one chart and see it marked automatically in another</Choice> <Choice>B. Zoom seamlessly from a city-wide view to street level</Choice> <Choice>C. Merge a NoSQL database with a spatial database</Choice> <Choice>D. Encode variables as facial expressions</Choice> </Choices>
+In the Istanbul air quality and traffic dashboard example, which chart type is used to summarise the spread of speeds and vehicle numbers?
+<Choices single> <Choice>A. Sunburst chart</Choice> <Choice>B. Treemap</Choice> <Choice correct>C. Box plots</Choice> <Choice>D. Pie chart</Choice> </Choices>
+According to the article, what is described as an essential but unglamorous first step before mapping or charting dashboard data?
+<Choices single> <Choice>A. Choosing an appropriate satellite basemap</Choice> <Choice>B. Setting up a relational database extension</Choice> <Choice>C. Hiring additional data analysts</Choice> <Choice correct>D. Careful data cleaning</Choice> </Choices>
+
+</ChoiceSet>
+
+---
+
+Watch the video about [GIS](https://www.youtube.com/watch?v=QlE2pdb1rxQ) and complete the transcipt.
+
+<DragAndDrop words="accessible; data; location; map; satellites; spatial">
+
+Geographic information systems, or GIS, are essential tools used to capture, store, and analyze geographical <DropZone answer="data"/>.
+GIS enables us to visualize and understand complex <DropZone answer="spatial"/> relationships, helping us to make informed decisions.
+GIS operates on data from many different sources, including <DropZone answer="satellites"/>, surveying equipment, and even mobile devices.
+This data is collected, processed, and incorporated into a digital <DropZone answer="map"/>, providing us with a comprehensive view of an area.
+GIS allows us to make data-driven decisions based on accurate <DropZone answer="location"/>-based information.
+GIS technology has evolved in recent years, making it more <DropZone answer="accessible"/> to a wider range of users.
+
+</DragAndDrop>
+
+---
+
+Attributions
+
+https://isprs-archives.copernicus.org/articles/XLVI-4-W5-2021/125/2021/isprs-archives-XLVI-4-W5-2021-125-2021.pdf 
+
+[What is GIS? Introduction to Geographic Information Systems](https://www.youtube.com/watch?v=QlE2pdb1rxQ)

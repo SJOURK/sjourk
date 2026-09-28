@@ -68,6 +68,14 @@ export default function Article() {
     <main className="content" tabIndex="-1">
       <MDXProvider
         components={{
+          a: ({ href, ...props }) => {
+            const external = /^https?:\/\//i.test(href ?? "");
+            return <a
+              href={href}
+              {...props}
+              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            />;
+          },
           h1: ({ children }) => <>
             <h1>{children}</h1>
             {meta?.date && <div className="article-meta">
