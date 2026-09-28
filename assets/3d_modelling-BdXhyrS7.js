@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-DAwmdtR4.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Blank:i,Choice:o,ChoiceSet:s,Choices:c,DragAndDrop:l,DropZone:u,FillIn:d}=r;return i||a(`Blank`,!0),o||a(`Choice`,!0),s||a(`ChoiceSet`,!0),c||a(`Choices`,!0),l||a(`DragAndDrop`,!0),u||a(`DropZone`,!0),d||a(`FillIn`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`3d-modelling`,children:`3D Modelling`}),`
+import{i as e,r as t}from"./index-DaIdXfHi.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Blank:i,Choice:o,ChoiceSet:s,Choices:c,DragAndDrop:l,DropZone:u,FillIn:d}=r;return i||a(`Blank`,!0),o||a(`Choice`,!0),s||a(`ChoiceSet`,!0),c||a(`Choices`,!0),l||a(`DragAndDrop`,!0),u||a(`DropZone`,!0),d||a(`FillIn`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`3d-modelling`,children:`3D Modelling`}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Put the following stages in the correct order.`}),`
 `,(0,n.jsx)(l,{words:`classified ground points;contours/cross-sections;laser scanning;cut-and-fill calculation;point cloud;TIN(Triangulated Irregular Network)/DTM(Digital Terrain Model)`,children:(0,n.jsxs)(r.ol,{children:[`
@@ -115,6 +115,7 @@ The polygon range recommended for mobile devices is considerably higher than the
 `,(0,n.jsx)(r.p,{children:`**Optional`}),`
 `,(0,n.jsx)(r.p,{children:`Write a short technical paragraph (100–120 words) describing the workflow used to produce a cut-and-fill volume calculation from field survey data. Try to include at least eight of the following words and phrases:\r
 •point cloud, classified points, TIN / DTM, breakline, interpolate, triangulate, validate, existing-ground model, proposed surface, cut and fill, quantify`}),`
+`,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Attributions`}),`
 `,(0,n.jsxs)(r.p,{children:[`The text Optimized 3D Cultural Heritage Models for Web, AR, MR, and VR Applications is a derivative of `,(0,n.jsx)(r.a,{href:`https://pmc.ncbi.nlm.nih.gov/articles/PMC7584044/`,children:`The Use of Low-Cost Unmanned Aerial Vehicles in the Process of Building Models for Cultural Tourism, 3D Web and Augmented/Mixed Reality Applications`}),`. Tomasz Templin,Dariusz Popielarczyk. MDPI, 2020. Licensed under CC BY 4.0.`]}),`
 `,(0,n.jsxs)(r.p,{children:[`The gapped excerpt 3D Modeling is a derivative of 3D Modeling. `,(0,n.jsx)(r.a,{href:`https://www.researchgate.net/publication/379939413_3D_Modeling`,children:`https://www.researchgate.net/publication/379939413_3D_Modeling`}),`. Licensed under CC BY 4.0.`]}),`

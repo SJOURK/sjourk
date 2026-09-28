@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-DAwmdtR4.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Blank:i,Choice:o,ChoiceSet:s,Choices:c,DragAndDrop:l,DropZone:u,FillIn:d,Img:f}=r;return i||a(`Blank`,!0),o||a(`Choice`,!0),s||a(`ChoiceSet`,!0),c||a(`Choices`,!0),l||a(`DragAndDrop`,!0),u||a(`DropZone`,!0),d||a(`FillIn`,!0),f||a(`Img`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`datum--benchmark`,children:`Datum & Benchmark`}),`
+import{i as e,r as t}from"./index-DaIdXfHi.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Blank:i,Choice:o,ChoiceSet:s,Choices:c,DragAndDrop:l,DropZone:u,FillIn:d,Img:f}=r;return i||a(`Blank`,!0),o||a(`Choice`,!0),s||a(`ChoiceSet`,!0),c||a(`Choices`,!0),l||a(`DragAndDrop`,!0),u||a(`DropZone`,!0),d||a(`FillIn`,!0),f||a(`Img`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`datum--benchmark`,children:`Datum & Benchmark`}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`1.When you begin a new survey project, how do you make sure your elevation readings will agree with data recorded by a different crew, months or years earlier?\r
 2.What do you already know about the difference between a “horizontal” reference and a “vertical” reference in surveying?\r
@@ -104,39 +104,7 @@ N `,(0,n.jsx)(u,{answer:`geoid undulation`})]})]}),`
 when combining national surveys.`]})})]}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Choose all the verbs that ollocate naturally with the noun phrase in a surveying context.`}),`
-`,(0,n.jsxs)(s,{children:[(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ a benchmark\r
-`,(0,n.jsx)(o,{correct:!0,children:`A.  establish`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. recover`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. destroy`}),`\r
-`,(0,n.jsx)(o,{children:`D. undertake`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ a datum\r
-`,(0,n.jsx)(o,{correct:!0,children:`A.  adopt`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. define`}),`\r
-`,(0,n.jsx)(o,{children:`C. perform`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`D. realise`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ a levelling line\r
-`,(0,n.jsx)(o,{correct:!0,children:`A.  close`}),`\r
-`,(0,n.jsx)(o,{children:`B. raise`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. run`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`D. observe`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ the misclosure\r
-`,(0,n.jsx)(o,{correct:!0,children:`A. adjust`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. compute`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. destribute`}),`\r
-`,(0,n.jsx)(o,{children:`D. undergo`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ a staff reading\r
-`,(0,n.jsx)(o,{children:`A. draw`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. record`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. book`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`D. take`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ levels from a benchmark\r
-`,(0,n.jsx)(o,{correct:!0,children:`A. bring in`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. carry`}),`\r
-`,(0,n.jsx)(o,{children:`C. deliver`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`D. transfer`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ an instrument\r
-`,(0,n.jsx)(o,{correct:!0,children:`A. centre`}),`\r
-`,(0,n.jsx)(o,{children:`B. conduct`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. level`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`D. set up`})]})}),(0,n.jsx)(c,{children:(0,n.jsxs)(r.p,{children:[`__________ a tide gauge\r
-`,(0,n.jsx)(o,{correct:!0,children:`A.  install`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. maintain`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. operate`}),`\r
-`,(0,n.jsx)(o,{children:`D. occupy`})]})})]}),`
+`,(0,n.jsxs)(s,{children:[(0,n.jsx)(r.p,{children:`__________ a benchmark`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A.  establish`}),(0,n.jsx)(o,{correct:!0,children:`B. recover`}),(0,n.jsx)(o,{correct:!0,children:`C. destroy`}),(0,n.jsx)(o,{children:`D. undertake`})]}),(0,n.jsx)(r.p,{children:`__________ a datum`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A.  adopt`}),(0,n.jsx)(o,{correct:!0,children:`B. define`}),(0,n.jsx)(o,{children:`C. perform`}),(0,n.jsx)(o,{correct:!0,children:`D. realise`})]}),(0,n.jsx)(r.p,{children:`__________ a levelling line`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A.  close`}),(0,n.jsx)(o,{children:`B. raise`}),(0,n.jsx)(o,{correct:!0,children:`C. run`}),(0,n.jsx)(o,{correct:!0,children:`D. observe`})]}),(0,n.jsx)(r.p,{children:`__________ the misclosure`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A. adjust`}),(0,n.jsx)(o,{correct:!0,children:`B. compute`}),(0,n.jsx)(o,{correct:!0,children:`C. destribute`}),(0,n.jsx)(o,{children:`D. undergo`})]}),(0,n.jsx)(r.p,{children:`__________ a staff reading`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{children:`A. draw`}),(0,n.jsx)(o,{correct:!0,children:`B. record`}),(0,n.jsx)(o,{correct:!0,children:`C. book`}),(0,n.jsx)(o,{correct:!0,children:`D. take`})]}),(0,n.jsx)(r.p,{children:`__________ levels from a benchmark`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A. bring in`}),(0,n.jsx)(o,{correct:!0,children:`B. carry`}),(0,n.jsx)(o,{children:`C. deliver`}),(0,n.jsx)(o,{correct:!0,children:`D. transfer`})]}),(0,n.jsx)(r.p,{children:`__________ an instrument`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A. centre`}),(0,n.jsx)(o,{children:`B. conduct`}),(0,n.jsx)(o,{correct:!0,children:`C. level`}),(0,n.jsx)(o,{correct:!0,children:`D. set up`})]}),(0,n.jsx)(r.p,{children:`__________ a tide gauge`}),(0,n.jsxs)(c,{children:[(0,n.jsx)(o,{correct:!0,children:`A.  install`}),(0,n.jsx)(o,{correct:!0,children:`B. maintain`}),(0,n.jsx)(o,{correct:!0,children:`C. operate`}),(0,n.jsx)(o,{children:`D. occupy`})]})]}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Combine two words to form collocations and then use them to complete the sentences.`}),`
 `,(0,n.jsx)(l,{words:`vertical;chart;fundamental;temporary;closing;ellipsoidal;tidal;reference;levelling;geoid;datum;benchmark;error;height;range;frame;loop;model`,children:(0,n.jsxs)(r.ol,{children:[`

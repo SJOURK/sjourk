@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-DAwmdtR4.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Blank:i,Choice:o,ChoiceSet:s,Choices:c,DragAndDrop:l,DropZone:u,FillIn:d,Img:f}=r;return i||a(`Blank`,!0),o||a(`Choice`,!0),s||a(`ChoiceSet`,!0),c||a(`Choices`,!0),l||a(`DragAndDrop`,!0),u||a(`DropZone`,!0),d||a(`FillIn`,!0),f||a(`Img`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`bearing--azimuth`,children:`Bearing & Azimuth`}),`
+import{i as e,r as t}from"./index-DaIdXfHi.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,...e(),...t.components},{Blank:i,Choice:o,ChoiceSet:s,Choices:c,DragAndDrop:l,DropZone:u,FillIn:d,Img:f}=r;return i||a(`Blank`,!0),o||a(`Choice`,!0),s||a(`ChoiceSet`,!0),c||a(`Choices`,!0),l||a(`DragAndDrop`,!0),u||a(`DropZone`,!0),d||a(`FillIn`,!0),f||a(`Img`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`bearing--azimuth`,children:`Bearing & Azimuth`}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsxs)(r.ol,{children:[`
 `,(0,n.jsx)(r.li,{children:`When you hear the words “bearing” and “azimuth,” what comes to mind? Are the two terms interchangeable, in your view?`}),`
@@ -114,56 +114,23 @@ Quadrant bearing: N 70° W   Azimuth: 290°`]})]}),`
 `,(0,n.jsx)(u,{answer:`apply`}),` h  the declination correction`]})}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Choose the word that forms the most natural collocation.`}),`
-`,(0,n.jsx)(s,{children:(0,n.jsx)(c,{single:!0,children:(0,n.jsxs)(r.ol,{children:[`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`Hold the compass flat and wait for the needle to ________.\r
-`,(0,n.jsx)(o,{correct:!0,children:`A. settle`}),`\r
-`,(0,n.jsx)(o,{children:`B. calm`}),`\r
-`,(0,n.jsx)(o,{children:`C. rest down`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`Before setting off, ________ a bearing on the summit cairn.
-`,(0,n.jsx)(o,{children:`A. make`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. take`}),`\r
-`,(0,n.jsx)(o,{children:`C. do`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`The navigator ________ the new course on the chart.
-`,(0,n.jsx)(o,{children:`A. drew`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. plotted`}),`\r
-`,(0,n.jsx)(o,{children:`C. painted`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`At such a short distance the error is ________.\r
-`,(0,n.jsx)(o,{children:`A.neglectful`}),`\r
-`,(0,n.jsx)(o,{children:`B. negligent`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. negligible`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`Nearby iron deposits can ________ the compass needle.\r
-`,(0,n.jsx)(o,{correct:!0,children:`A. deflect`}),`\r
-`,(0,n.jsx)(o,{children:`B. reflect`}),`\r
-`,(0,n.jsx)(o,{children:`C. inflect`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`Magnetic declination ________ with location and time.\r
-`,(0,n.jsx)(o,{children:`A. digresses`}),`\r
-`,(0,n.jsx)(o,{children:`B. diverges`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`C. varies`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`The rescue team ________ the caller’s position.\r
-`,(0,n.jsx)(o,{children:`A. trisected`}),`\r
-`,(0,n.jsx)(o,{correct:!0,children:`B. triangulated`}),`\r
-`,(0,n.jsx)(o,{children:`C. triplicated`})]}),`
-`]}),`
-`,(0,n.jsxs)(r.li,{children:[`
-`,(0,n.jsxs)(r.p,{children:[`Keep the direction-of-travel arrow ________at your target.\r
-`,(0,n.jsx)(o,{correct:!0,children:`A. pointing`}),`\r
-`,(0,n.jsx)(o,{children:`B. showing`}),`\r
-`,(0,n.jsx)(o,{children:`C. aiming`})]}),`
-`]}),`
-`]})})}),`
+`,(0,n.jsxs)(s,{children:[(0,n.jsxs)(r.ol,{children:[`
+`,(0,n.jsx)(r.li,{children:`Hold the compass flat and wait for the needle to ________.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{correct:!0,children:`A. settle`}),(0,n.jsx)(o,{children:`B. calm`}),(0,n.jsx)(o,{children:`C. rest down`})]}),(0,n.jsxs)(r.ol,{start:`2`,children:[`
+`,(0,n.jsx)(r.li,{children:`Before setting off, ________ a bearing on the summit cairn.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{children:`A. make`}),(0,n.jsx)(o,{correct:!0,children:`B. take`}),(0,n.jsx)(o,{children:`C. do`})]}),(0,n.jsxs)(r.ol,{start:`3`,children:[`
+`,(0,n.jsx)(r.li,{children:`The navigator ________ the new course on the chart.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{children:`A. drew`}),(0,n.jsx)(o,{correct:!0,children:`B. plotted`}),(0,n.jsx)(o,{children:`C. painted`})]}),(0,n.jsxs)(r.ol,{start:`4`,children:[`
+`,(0,n.jsx)(r.li,{children:`At such a short distance the error is ________.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{children:`A.neglectful`}),(0,n.jsx)(o,{children:`B. negligent`}),(0,n.jsx)(o,{correct:!0,children:`C. negligible`})]}),(0,n.jsxs)(r.ol,{start:`5`,children:[`
+`,(0,n.jsx)(r.li,{children:`Nearby iron deposits can ________ the compass needle.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{correct:!0,children:`A. deflect`}),(0,n.jsx)(o,{children:`B. reflect`}),(0,n.jsx)(o,{children:`C. inflect`})]}),(0,n.jsxs)(r.ol,{start:`6`,children:[`
+`,(0,n.jsx)(r.li,{children:`Magnetic declination ________ with location and time.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{children:`A. digresses`}),(0,n.jsx)(o,{children:`B. diverges`}),(0,n.jsx)(o,{correct:!0,children:`C. varies`})]}),(0,n.jsxs)(r.ol,{start:`7`,children:[`
+`,(0,n.jsx)(r.li,{children:`The rescue team ________ the caller’s position.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{children:`A. trisected`}),(0,n.jsx)(o,{correct:!0,children:`B. triangulated`}),(0,n.jsx)(o,{children:`C. triplicated`})]}),(0,n.jsxs)(r.ol,{start:`8`,children:[`
+`,(0,n.jsx)(r.li,{children:`Keep the direction-of-travel arrow ________at your target.`}),`
+`]}),(0,n.jsxs)(c,{single:!0,children:[(0,n.jsx)(o,{correct:!0,children:`A. pointing`}),(0,n.jsx)(o,{children:`B. showing`}),(0,n.jsx)(o,{children:`C. aiming`})]})]}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Use the word in CAPITALS to form a word that fits the gap.`}),`
 `,(0,n.jsx)(d,{children:(0,n.jsxs)(r.ol,{children:[`
