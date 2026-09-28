@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-DbVDs7m7.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,p:`p`,...e(),...t.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`property-valuation`,children:`Property Valuation`}),`
+import{i as e,r as t}from"./index-DAwmdtR4.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,p:`p`,...e(),...t.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`property-valuation`,children:`Property Valuation`}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Improving Property Valuation with Machine Learning and Image Data\r
 Accurate property valuation is essential for buyers, sellers, investors, financial institutions, and public authorities. Traditionally, property prices have been estimated using methods such as the cost approach, the income approach, and the sales comparison approach. Although these methods are widely accepted, they often struggle to capture the complex relationships between housing characteristics and market prices. As housing markets generate increasingly large datasets, machine learning has become a promising alternative for improving valuation accuracy.\r

@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-DbVDs7m7.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,p:`p`,...e(),...t.components},{Img:i}=r;return i||a(`Img`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(i,{src:`media/logo_urk_napis_prawy_pl.svg`}),`
+import{i as e,r as t}from"./index-DAwmdtR4.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,p:`p`,...e(),...t.components},{Img:i}=r;return i||a(`Img`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(i,{src:`media/logo_urk_napis_prawy_pl.svg`}),`
 `,(0,n.jsx)(r.h1,{id:`land-surveying`,children:`Land Surveying`}),`
 `,(0,n.jsx)(r.p,{children:`SURVEY YOUR ENGLISH`}),`
 `,(0,n.jsx)(r.p,{children:`English for Land Surveyors`}),`

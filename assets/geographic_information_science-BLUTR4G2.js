@@ -1,4 +1,4 @@
-import{i as e,r as t}from"./index-DbVDs7m7.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,p:`p`,...e(),...t.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`geographic-information-science`,children:`Geographic Information Science`}),`
+import{i as e,r as t}from"./index-DAwmdtR4.js";var n=t();function r(t){let r={a:`a`,h1:`h1`,hr:`hr`,p:`p`,...e(),...t.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`geographic-information-science`,children:`Geographic Information Science`}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.hr,{}),`
 `,(0,n.jsx)(r.p,{children:`Attributions`}),`
